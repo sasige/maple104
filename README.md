@@ -20,4 +20,4 @@ maple104单机版.项目仅供maple者兴趣爱好参考<br/>
 -Djavax.net.ssl.trustStorePassword=passwd<br/>
 
 
-由于代码比较陈旧..本人去整体项目规划....(PS:我不会说我是懒人.)
+由于代码比较陈旧..本人没整体项目规划....(PS:我不会说我是懒人.)
