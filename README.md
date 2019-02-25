@@ -7,8 +7,9 @@ maple104单机版.项目仅供maple者兴趣爱好参考<br/>
   1、mina修改为netty<br/>
   2、项目结构修改为maven项目<br/>
 
-项目使用ide工具为 IntelliJ IDEA
-加入jvm执行参数如下:
+项目使用ide工具为 IntelliJ IDEA<br/>
+jdk版本为oracleJdk1.7
+加入jvm执行参数如下:<br/>
 -Xms2046m<br/>
 -Xmx2046m<br/>
 -Xss1024k<br/>
