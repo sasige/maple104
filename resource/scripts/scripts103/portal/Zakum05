@@ -1,0 +1,24 @@
+importPackage(net.sf.odinms.server.maps);
+importPackage(net.sf.odinms.tools);
+importPackage(net.sf.odinms.client);
+
+function enter(pi) {
+	if (pi.getQuestStatus(100200) != net.sf.odinms.client.MapleQuestStatus.Status.COMPLETED) {
+		pi.playerMessage("任务完成之前，你可能无法面对BOSS！");
+		return false;
+	} else {
+		if (pi.getBossLog('ZAKUM') > 4) {
+			pi.playerMessage("你今天已经没有机会再次进入！");
+			return false;
+		} else if (pi.getPlayer().getClient().getChannel() != 4) {
+			pi.playerMessage("扎昆大怪物只能在第四频道召唤");
+			return false;
+		} else if (!pi.getPortal().getPortalStatus()) {
+			pi.playerMessage("里面已经开始了对抗大怪物的战斗，你无法进去！");
+			return false;
+		} else { //let them in
+			pi.warp(211042400, "west00");
+			return true;
+		}
+	}
+}

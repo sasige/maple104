@@ -1,0 +1,38 @@
+
+------------------------ 2019-02-22 16:32:26 ------------------------
+¥ÌŒÛ–≈œ¢£∫
+ver.104 CharacterName(935104542), WorldID(0), ChID(0), ZException (error code : 5 (æ‹æ¯∑√Œ °£)) source()
+ver.104 CharacterName(), WorldID(-1), ChID(-1), FieldID(-1), IID(-1)
+==== 2019/2/22 16:15:02.338 ==============================
+PID(22FC), TID(2E24)
+Exception code: E06D7363 
+Fault Address:  7708B022 01:0011A022
+Module: C:\WINDOWS\System32\KERNELBASE.dll
+
+Registers:
+EAX:016AF7D0
+EBX:00000000
+ECX:00000003
+EDX:00000000
+ESI:0F159CCC
+EDI:00000003
+CS:EIP:0023:7708B022
+SS:ESP:002B:016AF7D0  EBP:016AF82C
+DS:002B  ES:002B  FS:0053  GS:002B
+Flags:00200212
+
+Call stack:
+Address   Frame
+7708B022  016AF82C  RaiseException()+62 [C:\WINDOWS\System32\KERNELBASE.dll]
+00D7E569  016AF864  ZtlTaskMemReallocImp()+9E8A9 []
+00D7DB40  016AF884  ZtlTaskMemReallocImp()+9DE80 []
+006266F2  016AF8FC  0000:00000000 []
+00CEBCA1  016AFE14  ZtlTaskMemReallocImp()+BFE1 []
+00CE03C4  016AFF64  ZtlTaskMemReallocImp()+704 []
+77353CFB  016AFF74  RtlAllocateHeap()+1DFB [C:\WINDOWS\SYSTEM32\ntdll.dll]
+77353779  016AFFAC  RtlAllocateHeap()+1879 [C:\WINDOWS\SYSTEM32\ntdll.dll]
+77359664  01740000  RtlMultiByteToUnicodeSize()+5E4 [C:\WINDOWS\SYSTEM32\ntdll.dll]
+0100B455  01740004  ZtlTaskMemReallocImp()+32B795 []
+FFEEFFEE  01740008  0000:00000000 []
+
+

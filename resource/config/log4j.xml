@@ -1,0 +1,149 @@
+﻿<?xml version='1.0' encoding='UTF-8' ?>
+
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration>
+
+    <!-- This appender prints information to console -->
+    <appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.EnhancedPatternLayout">
+            <param name="ConversionPattern" value="%m%n"/>
+        </layout>
+        <filter class="commons.log4j.filters.ConsoleFilter"/>
+    </appender>
+
+    <!-- This appender prints all that is shown in console to file -->
+    <appender name="CONSOLE_TO_FILE" class="commons.log4j.appenders.TruncateToZipFileAppender">
+        <param name="file" value="log/Console.log"/>
+        <param name="append" value="false"/>
+        <param name="backupDir" value="log/backup"/>
+        <!-- Windows systems doesn't support : char in file names -->
+        <param name="backupDateFormat" value="yyyy-MM-dd HH-mm-ss"/>
+        <layout class="org.apache.log4j.EnhancedPatternLayout">
+            <param name="ConversionPattern" value="[%p] %d{HH:mm:ss} - %c:%L - %m%n"/>
+        </layout>
+        <filter class="commons.log4j.filters.ConsoleFilter"/>
+    </appender>
+
+    <!-- This appender accepts only messages with exceptions and logs them to separate file -->
+    <appender name="ERROR_APPENDER" class="commons.log4j.appenders.TruncateToZipFileAppender">
+        <param name="file" value="log/Errors.log"/>
+        <param name="append" value="false"/>
+        <param name="backupDir" value="log/backup"/>
+        <!-- Windows systems doesn't support : char in file names -->
+        <param name="backupDateFormat" value="yyyy-MM-dd HH-mm-ss"/>
+        <layout class="org.apache.log4j.EnhancedPatternLayout">
+            <param name="ConversionPattern" value="[%p %d{HH:mm:ss}] %c:%L - %m%n"/>
+        </layout>
+        <filter class="commons.log4j.filters.ThrowablePresentFilter"/>
+    </appender>
+	
+	<!-- Chat Log -->
+    <appender name="[信息]" class="commons.log4j.appenders.TruncateToZipFileAppender">
+        <param name="file" value="log/Chat.log"/>
+        <param name="append" value="false"/>
+        <param name="backupDir" value="log/Chat"/>
+        <!-- Windows systems doesn't support : char in file names -->
+        <param name="backupDateFormat" value="yyyy-MM-dd HH-mm-ss"/>
+        <layout class="org.apache.log4j.EnhancedPatternLayout">
+            <param name="ConversionPattern" value="[%d{HH:mm:ss}] %m%n"/>
+        </layout>
+        <filter class="commons.log4j.filters.ChatLogFilter"/>
+    </appender>
+	
+    <!-- Cheat -->
+    <appender name="[作弊]" class="commons.log4j.appenders.TruncateToZipFileAppender">
+        <param name="file" value="log/AntiCheat.log"/>
+        <param name="append" value="false"/>
+        <param name="backupDir" value="log/AntiCheat"/>
+        <!-- Windows systems doesn't support : char in file names -->
+        <param name="backupDateFormat" value="yyyy-MM-dd HH-mm-ss"/>
+        <layout class="org.apache.log4j.EnhancedPatternLayout">
+            <param name="ConversionPattern" value="[%d{HH:mm:ss}] %m%n"/>
+        </layout>
+        <filter class="commons.log4j.filters.AntiCheatFilter"/>
+    </appender>
+    
+    <!-- Trade -->
+    <appender name="[交易]" class="commons.log4j.appenders.TruncateToZipFileAppender">
+        <param name="file" value="log/Trade.log"/>
+        <param name="append" value="false"/>
+        <param name="backupDir" value="log/Trade"/>
+        <!-- Windows systems doesn't support : char in file names -->
+        <param name="backupDateFormat" value="yyyy-MM-dd HH-mm-ss"/>
+        <layout class="org.apache.log4j.EnhancedPatternLayout">
+            <param name="ConversionPattern" value="[%d{HH:mm:ss}] %m%n"/>
+        </layout>
+        <filter class="commons.log4j.filters.TradeFilter"/>
+    </appender>
+
+    <!-- Item -->
+    <appender name="[物品]" class="commons.log4j.appenders.TruncateToZipFileAppender">
+        <param name="file" value="log/Item.log"/>
+        <param name="append" value="false"/>
+        <param name="backupDir" value="log/Item"/>
+        <!-- Windows systems doesn't support : char in file names -->
+        <param name="backupDateFormat" value="yyyy-MM-dd HH-mm-ss"/>
+        <layout class="org.apache.log4j.EnhancedPatternLayout">
+            <param name="ConversionPattern" value="[%d{HH:mm:ss}] %m%n"/>
+        </layout>
+        <filter class="commons.log4j.filters.ItemFilter"/>
+    </appender>
+
+    <!-- HiredMerch -->
+    <appender name="[雇佣]" class="commons.log4j.appenders.TruncateToZipFileAppender">
+        <param name="file" value="log/HiredMerch.log"/>
+        <param name="append" value="false"/>
+        <param name="backupDir" value="log/HiredMerch"/>
+        <!-- Windows systems doesn't support : char in file names -->
+        <param name="backupDateFormat" value="yyyy-MM-dd HH-mm-ss"/>
+        <layout class="org.apache.log4j.EnhancedPatternLayout">
+            <param name="ConversionPattern" value="[%d{HH:mm:ss}] %m%n"/>
+        </layout>
+        <filter class="commons.log4j.filters.HiredMerchFilter"/>
+    </appender>
+
+	<!-- GM Audit -->
+    <appender name="[命令]" class="commons.log4j.appenders.TruncateToZipFileAppender">
+        <param name="file" value="log/GmAudit.log"/>
+        <param name="append" value="false"/>
+        <param name="backupDir" value="log/GmAudit"/>
+        <!-- Windows systems doesn't support : char in file names -->
+        <param name="backupDateFormat" value="yyyy-MM-dd HH-mm-ss"/>
+        <layout class="org.apache.log4j.EnhancedPatternLayout">
+            <param name="ConversionPattern" value="[%d{HH:mm:ss}] %m%n"/>
+        </layout>
+        <filter class="commons.log4j.filters.GmAuditFilter"/>
+    </appender>
+
+    <!-- Audit -->
+    <appender name="[检查]" class="commons.log4j.appenders.TruncateToZipFileAppender">
+        <param name="file" value="log/Audit.log"/>
+        <param name="append" value="false"/>
+        <param name="backupDir" value="log/Audit"/>
+        <!-- Windows systems doesn't support : char in file names -->
+        <param name="backupDateFormat" value="yyyy-MM-dd HH-mm-ss"/>
+        <layout class="org.apache.log4j.EnhancedPatternLayout">
+            <param name="ConversionPattern" value="[%d{HH:mm:ss}] %m%n"/>
+        </layout>
+        <filter class="commons.log4j.filters.AuditFilter"/>
+    </appender>
+
+    <!-- Root Logger -->
+    <root>
+        <priority value="info"/>
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="CONSOLE_TO_FILE"/>
+        <appender-ref ref="ERROR_APPENDER"/>
+        <appender-ref ref="[信息]"/>
+        <appender-ref ref="[作弊]"/>
+        <appender-ref ref="[物品]"/>
+        <appender-ref ref="[命令]"/>
+        <appender-ref ref="[交易]"/>
+        <appender-ref ref="[雇佣]"/>
+        <appender-ref ref="[检查]"/>
+    </root>
+
+    <categoryFactory class="commons.log4j.ThrowableAsMessageAwareFactory"/>
+
+</log4j:configuration>

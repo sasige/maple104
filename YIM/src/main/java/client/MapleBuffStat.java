@@ -1,0 +1,196 @@
+package client;
+
+import handling.Buffstat;
+import java.io.Serializable;
+
+public enum MapleBuffStat implements Serializable, Buffstat {
+
+    物理攻击(0x1, 1),
+    物理防御(0x2, 1),
+    魔法攻击(0x4, 1),
+    魔法防御(0x8, 1),
+    命中率(0x10, 1),
+    回避率(0x20, 1),
+    手技(0x40, 1),
+    移动速度(0x80, 1),
+    跳跃力(0x100, 1),
+    魔法盾(0x200, 1),
+    隐身术(0x400, 1),
+    攻击加速(0x800, 1),
+    伤害反击(0x1000, 1),
+    MAXHP(0x2000, 1),
+    MAXMP(0x4000, 1),
+    神之保护(0x8000, 1),
+    无形箭弩(0x10000, 1),
+    斗气集中(0x200000, 1),
+    召唤兽(0x200000, 1),
+    属性攻击(0x400000, 1),
+    龙之力(0x800000, 1),
+    神圣祈祷(0x1000000, 1),
+    聚财术(0x2000000, 1),
+    影分身(0x4000000, 1),
+    敛财术(0x8000000, 1),
+    替身术(0x8000000, 1),
+    金钱护盾(0x10000000, 1),
+    HP_LOSS_GUARD(0x20000000, 1),
+    变身术(0x2, 2),
+    RECOVERY(0x4, 2),
+    冒险岛勇士(0x8, 2),
+    双刀荆棘(0x10, 2),
+    火眼晶晶(0x20, 2),
+    魔法反击(0x40, 2),
+    暗器伤人(0x100, 2),
+    终极无限(0x200, 2),
+    进阶祝福(0x400, 2),
+    幻影步(0x800, 2),
+    致盲(0x1000, 2),
+    集中精力(0x2000, 2),
+    英雄回声(0x8000, 2),
+    MESO_RATE(0x10000, 2),
+    GHOST_MORPH(0x20000, 2),
+    ARIANT_COSS_IMU(0x40000, 2),
+    DROP_RATE(0x100000, 2),
+    EXPRATE(0x400000, 2),
+    ACASH_RATE(0x800000, 2),
+    ILLUSION(0x1000000, 2),
+    狂暴战魂(0x2000000, 2),
+    金刚霸体(0x4000000, 2),
+    闪光击(0x8000000, 2),
+    ARIANT_COSS_IMU2(0x10000000, 2),
+    终极弓剑(0x20000000, 2),
+    自然力重置(0x80000000, 2),
+    风影漫步(0x1, 3),
+    矛连击强化(0x4, 3),
+    连环吸血(0x8, 3),
+    战神之盾(0x10, 3),
+    战神抗压(0x20, 3),
+    战神威势(0x40, 3),
+    PYRAMID_PQ(0x80, 3),
+    缓速术(0x1000, 3),
+    魔法屏障(0x2000, 3),
+    抗魔领域(0x4000, 3),
+    灵魂之石(0x8000, 3),
+    飞行骑乘(0x10000, 3),
+    雷鸣冲击(0x40000, 3),
+    葵花宝典(0x80000, 3),
+    死亡猫头鹰(0x100000, 3),
+    终极斩(0x400000, 3),
+    DAMAGE_BUFF(0x800000, 3),
+    ATTACK_BUFF(0x1000000, 3),
+    地雷(0x2000000, 3),
+    古老意志(0x4000000, 3),
+    增强_MAXHP(0x4000000, 3),
+    增强_MAXMP(0x8000000, 3),
+    增强_物理攻击(0x10000000, 3),
+    增强_魔法攻击(0x20000000, 3),
+    增强_物理防御(0x40000000, 3),
+    增强_魔法防御(0x80000000, 3),
+    完美机甲(0x1, 4),
+    卫星防护_PROC(0x2, 4),
+    卫星防护_吸收(0x4, 4),
+    幻灵飓风(0x8, 4),
+    CRITICAL_RATE_BUFF(0x10, 4),
+    MP_BUFF(0x20, 4),
+    DAMAGE_TAKEN_BUFF(0x40, 4),
+    DODGE_CHANGE_BUFF(0x80, 4),
+    幻灵转化(0x100, 4),
+    幻灵重生(0x200, 4),
+    潜入(0x400, 4),
+    金属机甲(0x800, 4),
+    幻灵灵气(0x1000, 4),
+    黑暗灵气(0x2000, 4),
+    蓝色灵气(0x4000, 4),
+    黄色灵气(0x8000, 4),
+    幻灵霸体(0x10000, 4),
+    暴走形态(0x20000, 4),
+    幸运骰子(0x40000, 4),
+    祝福护甲(0x80000, 4),
+    反制攻击(0x100000, 4),
+    快速移动精通(0x200000, 4),
+    战斗命令(0x400000, 4),
+    灵魂助力(0x800000, 4),
+    GIANT_POTION(0x2000000, 4),
+    玛瑙的保佑(0x4000000, 4),
+    玛瑙的意志(0x8000000, 4),
+    牧师祝福(0x20000000, 4),
+    压制术(0x1, 5),
+    冰骑士(0x2, 5),
+    力量(0x10, 5),
+    智力(0x20, 5),
+    敏捷(0x40, 5),
+    运气(0x80, 5),
+    ANGEL_ATK(0x400, 5, true),
+    ANGEL_MATK(0x800, 5, true),
+    HP_BOOST(0x1000, 5, true),
+    MP_BOOST(0x2000, 5, true),
+    ANGEL_ACC(0x4000, 5, true),
+    ANGEL_AVOID(0x8000, 5, true),
+    ANGEL_JUMP(0x10000, 5, true),
+    ANGEL_SPEED(0x20000, 5, true),
+    ANGEL_STAT(0x40000, 5, true),
+    PVP_DAMAGE(0x4000, 5),
+    PVP_ATTACK(0x8000, 5),
+    INVINCIBILITY(0x10000, 5),
+    潜力解放(0x20000, 5),
+    精灵弱化(0x40000, 5),
+    拳手索命(0x80000, 5),
+    FROZEN(0x100000, 5),
+    ICE_SKILL(0x400000, 5),
+    无限精气(0x800000, 5),
+    神圣魔法盾(0x1, 6),
+    神秘瞄准术(0x10, 6, true),
+    异常抗性(0x10, 6),
+    属性抗性(0x20, 6),
+    双弩水盾(0x40, 6),
+    黑暗变形(0x80, 6),
+    随机橡木桶(0x100, 6),
+    精神连接(0x200, 6),
+    神圣拯救者的祝福(0x4000, 6),
+    精神注入(0x8000, 6),
+    NO_SLIP(0x40000, 6),
+    FAMILIAR_SHADOW(0x80000, 6),
+    SIDEKICK_PASSIVE(0x100000, 6),
+    吸血鬼之触(0x2000000, 6),
+    黑暗忍耐(0x4000000, 6),
+    百分比MaxHp(0x8, 7, true),
+    百分比MaxMp(0x80000, 7, true),
+    百分比无视防御(0x2000000, 7),
+    幻影屏障(0x8000000, 7),
+    卡牌审判(0x40000000, 7),
+    能量获得(0x1000000, 8),
+    疾驰速度(0x2000000, 8),
+    疾驰跳跃(0x4000000, 8),
+    骑兽技能(0x8000000, 8, true),
+    极速领域(0x20000000, 8),
+    导航辅助(0x40000000, 8),
+    DEFAULT_BUFFSTAT(0x80000000, 8);
+    private static final long serialVersionUID = 0L;
+    private int buffstat;
+    private int first;
+    private boolean stacked = false;
+
+    private MapleBuffStat(int buffstat, int first) {
+        this.buffstat = buffstat;
+        this.first = first;
+    }
+
+    private MapleBuffStat(int buffstat, int first, boolean stacked) {
+        this.buffstat = buffstat;
+        this.first = first;
+        this.stacked = stacked;
+    }
+
+    @Override
+    public int getPosition() {
+        return this.first;
+    }
+
+    @Override
+    public int getValue() {
+        return this.buffstat;
+    }
+
+    public boolean canStack() {
+        return this.stacked;
+    }
+}

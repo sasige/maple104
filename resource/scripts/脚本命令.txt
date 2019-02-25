@@ -1,0 +1,8 @@
+cm.trembleEffect(0, 500);   地图震动
+
+qm.changeJob(3510);          转职
+
+qm.gainItem(4032268, -1);    删除物品
+
+qm.gainItem(4032268, 1);    给予物品
+
